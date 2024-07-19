@@ -1,4 +1,4 @@
-import CommonLogo from "@/components/Others/authentication/common/CommonLogo";
+import CommonLogo from "@/src/components/Others/authentication/common/CommonLogo";
 import Link from "next/link";
 import { useState } from "react";
 import {Button,Col,Container,FormGroup,Input,Label,Row,} from "reactstrap";

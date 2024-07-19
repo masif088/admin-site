@@ -1,4 +1,4 @@
-import CommonForm from "@/components/Others/authentication/common/CommonForm";
+import CommonForm from "@/src/components/Others/authentication/common/CommonForm";
 import { Col, Container, Row } from "reactstrap";
 
 const SimpleLogin = () => {

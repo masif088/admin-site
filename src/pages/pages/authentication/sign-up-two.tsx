@@ -1,4 +1,4 @@
-import CommonRegisterForm from "@/components/Others/authentication/common/CommonRegisterForm";
+import CommonRegisterForm from "@/src/components/Others/authentication/common/CommonRegisterForm";
 import { Col, Container, Row } from "reactstrap";
 import { ImgPath } from "utils/Constant";
 import RatioImage from "utils/RatioImage.tsx";

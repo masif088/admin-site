@@ -6,6 +6,9 @@ import ConfigDB from 'config/ThemeConfig';
 import BgDark from './BgDark';
 import DarkSidebar from './DarkSidebar';
 import BgLight from './BgLight';
+import Cookies from "js-cookie";
+import {doc, updateDoc} from "@firebase/firestore";
+import {db} from "@/firebase/Firebase";
 
 const MixLayoutComponent = () => {
     const { addMixBackgroundLayout, setMixLayout } = useContext(CustomizerContext);
@@ -24,6 +27,17 @@ const MixLayoutComponent = () => {
 
     const handleCustomizerMix_Background = (value: string) => {
         addMixBackgroundLayout(value);
+
+        const uid = Cookies.get('token')
+        if (uid !== undefined) {
+            const query1 = doc(db, 'users', uid)
+            updateDoc(query1, {
+                ['layout_preference.mix_background_layout']: value
+            })
+            Cookies.set('mix_background_layout', value)
+        }
+
+
         if (value === 'light-only') {
             document.body.classList.add('light-only');
             document.body.classList.remove('dark-sidebar');

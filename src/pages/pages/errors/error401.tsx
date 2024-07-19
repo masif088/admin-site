@@ -1,4 +1,4 @@
-import CommonErrorPage from "@/components/Others/Error/common/CommonErrorPage";
+import CommonErrorPage from "../../../../components/Others/Error/common/CommonErrorPage";
 
 const Error401 = () => {
   return (

@@ -29,7 +29,7 @@ const CustomizerProvider = ({ children }: CustomizerContextType) => {
             if (item.name === layoutName) {
                 ConfigDB.data.settings.layout_class = item.class;
                 setLayout(item.class)
-                router.push(router.asPath.split('?').shift() + `?layout=${layoutName}`);
+                router.push(router.asPath.split('?').shift() + ``);
             }
         });
     }, [layoutName]);

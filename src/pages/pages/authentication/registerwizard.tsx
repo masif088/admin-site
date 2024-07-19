@@ -1,4 +1,4 @@
-import RegisterWizard from "@/components/Others/authentication/RegisterWizard";
+import RegisterWizard from "@/src/components/Others/authentication/RegisterWizard";
 
 const RegisterWizardForm = () => {
   return <RegisterWizard />;
